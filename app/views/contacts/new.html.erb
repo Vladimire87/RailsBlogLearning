@@ -1,5 +1,5 @@
 <h1>Our Contacts:</h1>
-<%= form_for :contact, url: contacts_path do |f| %>
+<%= form_for :contact, url: '/contacts', method: :post do |f| %>
   <p>
     <%=f.label :email%></br>
   <%=f.text_field :email%>
