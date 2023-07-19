@@ -1,14 +1,14 @@
 <h1>Our Contacts:</h1>
-<form action="/home/contacts" method="post">
+<%= form_for :contact, url: contacts_path do |f| %>
   <p>
-    <label for="email">Email:</label>
-    <input type="text" name="contact[email]">
-  </p>
-  <p>
-    <label for="message">Message:</label><br>
-    <textarea name="contact[message]" id="" cols="30" rows="10"></textarea>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+    <%=f.label :email%></br>
+  <%=f.text_field :email%>
+</p>
+<p>
+  <%=f.label :message%></br>
+<%=f.text_area :message%>
+</p>
+<p>
+  <%=f.submit 'Send Message'%>
+</p>
+<%end%>
