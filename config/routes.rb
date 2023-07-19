@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'home/index'
-  resources :contacts, only: %i[new create]
+  resource :contacts, only: %i[new create], path_names: { new: '' }
 
   resources :articles
 end
